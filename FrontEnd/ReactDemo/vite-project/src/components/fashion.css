@@ -1,0 +1,21 @@
+.card {
+    display: inline-block;
+    height: 350px;
+    width: 250px;
+    overflow: scroll;
+    box-shadow: 2px 2px 12px grey;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    color: grey;
+}
+
+.fashion-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
