@@ -1,0 +1,8 @@
+Design a page that has-
+1. A navigation bar with logo and home.
+2. A main section with a form.
+3. The form has a text input on top and two buttons below it and a viewing pane below it.
+4. The first button writes the text from the input to a file.
+5. The second button shows the text contents of that file in the viewing pane.
+6. Use 'fs' module to read and modify file.
+7. Keep the code minimal.

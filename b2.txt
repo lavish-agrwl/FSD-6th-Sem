@@ -1,0 +1,109 @@
+System Design Introduction - LLD & HLD
+Last Updated : 24 Sep, 2025
+System design is the process of planning, structuring and defining the architecture of Software System.
+
+Involves translating user requirements into a detailed blueprint that guides the implementation phase.
+The goal is to create a well-organized and efficient structure that meets the intended purpose while considering factors like scalability, maintainability, and performance.
+System Design in SDLC
+In System Design Life Cycle, without the designing phase, one cannot jump to the implementation or the testing part.
+System Design is a vital step and also provides the backbone to handle exceptional scenarios because it represents the business logic of the software.
+system_design2
+System Design can be divided into two complementary parts
+1
+High-Level Design (HLD)
+It lays out the overall architecture of the system — how major components interact, what services or modules will exist, and how data flows among them.
+
+Gives you the big picture: how the system fits together, its core structure, and major decisions.
+Done by architects, stakeholders and managers
+Prerequisite Technical Knowledge for HLD
+Basic Coding Skills (Data Structures and Algorithms)
+Compared to Low Level Design, High Level Design is typically done by more senior people who have hands-on experience on software projects.
+Knowing the roles of components like databases (SQL and NoSQL), caches (Redis, Memcached, CDNs), and APIs.
+Low Level Design (Object Oriented Programming and Design Patterns)
+In-depth understanding of Functional Requirements (What the system must do e.g., user registration, streaming) and Non-Functional Requirements (How the system should perform—scalability, latency, availability, security, etc)
+Networking and Security Fundamentals like DNS, protocols (TCP/UDP, HTTP, WebSockets), OAuth, JWT, TLS/SSL, rate-limiting, API security, and basic DDOS protection.
+Message queues and streaming tools like Kafka or RabbitMQ.
+Knowledge of Microservices vs. Monoliths (When to split services and how to manage dependencies), fault tolerance, fallback strategies, redundancy, Load Balancer Types & Algorithms.
+Observability tools like Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana) and Alerting systems (e.g., PagerDuty)
+Topics Covered in HLD:
+System architecture overview: Defines the major components, modules, and how they interact (e.g., services, queues, databases) .
+Data flow and component interaction: Illustrates how data moves between modules, along with key integrations and interfaces.
+Technology stack and infrastructure: High-level decisions on frameworks, platforms, hardware, databases, and hosting setups.
+Module responsibilities: Describes what each module does and how they relate to one another .
+Performance & trade-offs: Includes design trade-offs, performance considerations, scalability, security, cost and other non-functional factors .
+Artifacts: Commonly includes architecture diagrams, component and deployment diagrams, data flow diagrams, and possibly ER/DB schematic overviews.
+Real World Examples of HLD Decisions
+Netflix transitioned their entire backend from a monolith to microservices (starting with encoding and UI services), completing the migration by 2011 to scale rapidly during high-load events like holiday seasons.
+Uber adopted an event-driven architecture where ride requests, location updates, and fare changes emit events that trigger real-time systems like driver matching, billing, and dynamic pricing.
+Twitter deployed a load-balanced architecture with caching of trending topics and tweets to quickly serve millions of users and handle real-time data flows efficiently.
+Low-Level Design (LLD)
+It covers how each part works & is implemented internally
+
+Gives developers a clear, actionable blueprint to build each component.
+Once a High Level Design is built by stakeholders, it is the job of senior developers and designers to create a low level design.
+Prerequisites / What You Should Know First:
+Basic Coding Skills (Data Structures and Algorithms)
+Strong grasp of OOP concepts (Encapsulation, inheritance, polymorphism & abstraction)
+Topics Covered:
+Component/module breakdown: Detailed internal logic for each module—with class responsibilities, methods, attributes, interactions
+Database schema & structure: Designing tables, keys, indexes, relationships with SQL/NoSQL refinements
+API & interface definitions: Precise request/response formats, error codes, methods, endpoints, and internal interfacing
+Error handling & validation logic: Define how each module manages invalid inputs, failures, edge cases, and logging
+Design patterns & SOLID: Implement design patterns and solid principles to ensure clean, extensible, maintainable code
+UML and pseudocode artifacts: Class diagrams, sequence diagrams, pseudocode or flowcharts to clarify logic paths and method calls
+Steps for getting started with System Design
+Here are some steps to get started with system design:
+
+system_design22
+Understand Requirements
+Gather and analyze business needs by consulting stakeholders, users, and documentation.
+Define Architecture
+Identify key system components and how they interact (e.g., services, APIs, databases).
+Choose Tech Stack
+Select appropriate languages, databases, frameworks, and tools based on requirements.
+Design Modules
+Break the system into modules, defining their responsibilities and data flow.
+Plan for Scalability
+Design with growth in mind—anticipate load, optimize bottlenecks, and use scalable patterns.
+Ensure Security & Privacy
+Identify risks and implement measures like authentication, encryption, and data protection.
+Test & Validate
+Write test cases and simulate real-world usage to ensure the system meets requirements.
+Overall, system design is a complex process that requires careful planning and attention to detail. By following these steps, you can create a system design that meets the needs of your users and your business.
+
+Tips and Tricks to solve System Design Problem
+
+When you are given a System Design Problem, you should approach it in a planned manner.
+Initially, the Problem may look huge, and one can easily get confused about how to start solving it.
+And moreover, there is no fixed solution while you are designing a system.
+There is more than one way to reach the Solution.
+So let’s discuss how one should start with solving a Design Problem given in an Interview.
+
+Approaching a Design Problem
+1. Breaking Down the Problem
+When you are given a Design Problem start breaking it down into small components. These components can be Services or Features which you need to implement in the System.
+
+Initially, a System given to be designed can have a large number of features and you are not expected to design everything if it’s an Interview.
+Ask your interviewer about the Features you are planning to put in your system. Is there anything else you should be putting there? Any Feature? Any Service? … Ask!
+2. Communicating your Ideas
+Communicate well with the Interviewer:
+
+While designing the system keep him in the loop.
+Discuss your process out loud.
+Try to demonstrate your design clearly on the whiteboard with flowcharts and diagrams.
+Describe your ideas to your interviewer, how you have planned to tackle the problem of scalability, how you will be designing your database, and many others.
+3. Assumptions that make sense
+Make some reasonable assumptions while you are designing the System.
+
+Suppose you have to assume the number of requests the system will be processed per day, the number of database calls made in a month, or the efficiency rate of your Caching System. These are some of the numbers you need to assume while designing. Try to keep these numbers as reasonable as possible. Back up your assumption with some solid facts and figures.
+
+Important points to consider when designing a software system:
+Scalability: The system should be designed to handle increased loads and be able to scale horizontally or vertically as needed.
+Performance: The system should be designed to perform efficiently and effectively, with minimal latency and response time.
+Reliability: The system should be reliable and available, with minimal downtime or system failures.
+Security: The system should be designed with security in mind, including measures to prevent unauthorized access and protect sensitive data.
+Maintainability: The system should be designed to be easy to maintain and update, with clear documentation and well-organized code.
+Interoperability: The system should be designed to work seamlessly with other systems and components, with clear and well-defined interfaces.
+Usability: The system should be designed to be user-friendly and intuitive, with a clear and consistent user interface.
+Cost-effectiveness: The system should be designed to be cost-effective, with a focus on minimizing development and operational costs while still meeting the requirements.
+Suggested Quiz
