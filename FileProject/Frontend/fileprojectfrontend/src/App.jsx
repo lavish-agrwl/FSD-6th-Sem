@@ -62,7 +62,7 @@ function App() {
       <nav className="navbar">
         <div className="logoContainer">
         <img src={logo} alt="Logo" className="logo" />
-        <div className="home">File Reader and Writer</div>
+        <div className="home">File Reader and Writer using FS Module</div>
         </div>
         <div className="home">Home</div>
       </nav>
