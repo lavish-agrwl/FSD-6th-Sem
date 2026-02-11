@@ -26,4 +26,12 @@ const fs = require('fs');
 //     console.log('File copied successfully.');
 // });
 
-fs.unlinkSync('./hello.txt');
+// fs.unlinkSync('./hello.txt');
+
+const os = require('os');
+console.log('Operating System:', os.platform());
+console.log('UserInfo:', os.userInfo());
+console.log('CPU', os.arch());
+console.log('Free Memory', os.freemem());
+os.hostname()
+os.to
