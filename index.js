@@ -1,4 +1,4 @@
-const fs = require('fs');
+// const fs = require("fs");
 // fs.writeFile('./hello.txt', 'Hello, World!', () => {  });
 
 // fs.readFile('./hello.txt', 'utf-8', (err, data) => {
@@ -28,10 +28,25 @@ const fs = require('fs');
 
 // fs.unlinkSync('./hello.txt');
 
-const os = require('os');
-console.log('Operating System:', os.platform());
-console.log('UserInfo:', os.userInfo());
-console.log('CPU', os.arch());
-console.log('Free Memory', os.freemem());
-os.hostname()
-os.to
+// const os = require('os');
+// console.log('Operating System:', os.platform());
+// console.log('UserInfo:', os.userInfo());
+// console.log('CPU', os.arch());
+// console.log('Free Memory', os.freemem());
+
+const http = require("http");
+const fs = require("fs");
+const home = fs.readFileSync("index.html");
+const myserver = http.createServer((req, res) => {
+  // console.log('Received request for URL:');
+  // res.end('Hello, World!');
+
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+
+  // res.end('Hello, World!');
+  res.end(home);
+});
+myserver.listen(8080, () => {
+  console.log("Server is listening on port 8080");
+});
