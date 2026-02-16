@@ -1,0 +1,14 @@
+.home {
+    min-height: 100vh;
+    background: #f1f3f6;
+}
+
+.home-content {
+    padding: 16px 0;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 12px 0;
+    }
+}

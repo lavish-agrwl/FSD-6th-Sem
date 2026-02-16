@@ -1,0 +1,153 @@
+.flipkart-navbar {
+    background: #2874f0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 20px;
+}
+
+.navbar-logo {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+}
+
+.logo-text {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.5px;
+}
+
+.logo-subtext {
+    color: white;
+    font-size: 11px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.plus {
+    color: #ffe500;
+    font-weight: 600;
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #878787;
+}
+
+.search-button {
+    background: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #2874f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto;
+}
+
+.navbar-btn {
+    background: white;
+    color: #2874f0;
+    border: none;
+    padding: 6px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.navbar-btn:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.navbar-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .search-bar {
+        max-width: 400px;
+    }
+
+    .navbar-actions {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .logo-subtext {
+        display: none;
+    }
+
+    .navbar-link span {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 16px;
+    }
+
+    .navbar-btn {
+        padding: 6px 24px;
+    }
+}
