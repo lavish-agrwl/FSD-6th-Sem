@@ -1,3 +1,4 @@
+// Commit #1 at 2026-02-25 10:14:22
 // const fs = require("fs");
 // fs.writeFile('./hello.txt', 'Hello, World!', () => {  });
 
@@ -40,7 +41,15 @@
 // const myserver = http.createServer((req, res) => {
 //   // console.log('Received request for URL:');
 //   // res.end('Hello, World!');
+// const http = require("http");
+// const fs = require("fs");
+// const home = fs.readFileSync("index.html");
+// const myserver = http.createServer((req, res) => {
+//   // console.log('Received request for URL:');
+//   // res.end('Hello, World!');
 
+//   res.statusCode = 200;
+//   res.setHeader("Content-Type", "text/html");
 //   res.statusCode = 200;
 //   res.setHeader("Content-Type", "text/html");
 
